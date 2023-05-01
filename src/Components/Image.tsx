@@ -12,7 +12,7 @@ function Image(props: {
       console.log(event.target.files)
       if (event.target.files[0].size > 2000000) {
         window.alert(
-          'Image is too large. Max size is 2 Mb. Please reduce the size and upload again.'
+          'La imagen es demasiado grande. El tamaño máximo es 2MB. Favor de reducir el tamaño e intentar otra vez.'
         )
         return
       }

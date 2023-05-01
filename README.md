@@ -1,6 +1,8 @@
-# dnd-character-sheets
+# dnd-hojas-de-personaje
 
-> Dungeons and Dragons 5th Edition character sheets created in ReactJS.
+> Hojas de personaje de Dungeons & Dragons 5ta Edición creadas en ReactJS.
+
+Versión traducida al español de [https://github.com/DarylBuckle/dnd-character-sheets](https://github.com/DarylBuckle/dnd-character-sheets)
 
 [https://dnd5esheets.com](https://dnd5esheets.com)
 

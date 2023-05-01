@@ -70,16 +70,16 @@ function SpellTable(props: {
     <div className={classes} style={props.style}>
       {props.showLabels ? (
         <div className='d-and-d-spell-header-labels'>
-          <label style={{ width: '20px' }}>Spell Level</label>
-          <label style={{ width: '80px' }}>Slots Total</label>
-          <label style={{ width: 'calc(100% - 100px)' }}>Slots Remaining</label>
+          <label style={{ width: '20px' }}>Nivel de Conjuro</label>
+          <label style={{ width: '80px' }}>Espacios Totales</label>
+          <label style={{ width: 'calc(100% - 100px)' }}>Espacios Gastados</label>
         </div>
       ) : null}
       <div className='d-and-d-spell-header'>
         <div className='d-and-d-spell-level'>{props.level}</div>
         {props.level === 0 ? (
           <div className='d-and-d-spell-slots'>
-            <label>Cantrips</label>
+            <label>Trucos</label>
           </div>
         ) : (
           <div className='d-and-d-spell-slots'>
@@ -104,9 +104,9 @@ function SpellTable(props: {
           <thead>
             <tr>
               <th style={{ width: '30px', position: 'absolute', left: '-7px' }}>
-                Prepared
+                Preparado
               </th>
-              <th>Spell Name</th>
+              <th>Nombre del Conjuro</th>
             </tr>
           </thead>
         ) : null}

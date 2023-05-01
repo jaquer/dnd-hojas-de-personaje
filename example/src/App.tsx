@@ -43,11 +43,11 @@ const App = (props: any) => {
               console.log('Loaded Character - ' + characterToLoad)
               updateCharacter(response.data)
             } else {
-              throw new Error('Json file does not contain a DnD character.')
+              throw new Error('El archivo no contiene un personaje de DnD.')
             }
           }
           catch {
-            throw new Error('Json file does not contain a DnD character.')
+            throw new Error('El archivo no contiene un personaje de DnD.')
           }
         })
         .catch((error: any) => {
@@ -136,11 +136,11 @@ const App = (props: any) => {
       if (!Array.isArray(result) && typeof result === 'object') {
         updateCharacter(result)
       } else {
-        window.alert('Json file does not contain a DnD character.')
+        window.alert('El archivo no contiene un personaje de DnD.')
       }
     }
     catch {
-      window.alert('Json file does not contain a DnD character.')
+      window.alert('El archivo no contiene un personaje de DnD.')
     }
   }
 
@@ -167,26 +167,26 @@ const App = (props: any) => {
             <div className='collapse navbar-collapse' id='navbarSupportedContent'>
                 <ul className='navbar-nav ml-lg-5' data-toggle='collapse' data-target='.navbar-collapse.show'>
                     <li className='nav-item mr-lg-3'>
-                        <Link className={props.location.pathname === '/stats' ? 'nav-link active' : 'nav-link'} to='/stats'>Stats</Link>
+                        <Link className={props.location.pathname === '/stats' ? 'nav-link active' : 'nav-link'} to='/stats'>Status</Link>
                     </li>
                     <li className='nav-item mr-lg-3'>
-                        <Link className={props.location.pathname === '/profile' ? 'nav-link active' : 'nav-link'} to='/profile'>Profile</Link>
+                        <Link className={props.location.pathname === '/profile' ? 'nav-link active' : 'nav-link'} to='/profile'>Perfil</Link>
                     </li>
                     <li className='nav-item mr-lg-3'>
-                        <Link className={props.location.pathname === '/spells' ? 'nav-link active' : 'nav-link'} to='/spells'>Spells</Link>
+                        <Link className={props.location.pathname === '/spells' ? 'nav-link active' : 'nav-link'} to='/spells'>Conjuros</Link>
                     </li>
                     <li className='nav-item mr-lg-3'>
-                        <Link className={props.location.pathname === '/all' ? 'nav-link active' : 'nav-link'} to='/all'>All</Link>
+                        <Link className={props.location.pathname === '/all' ? 'nav-link active' : 'nav-link'} to='/all'>Todo</Link>
                     </li>
                 </ul>
 
                 <ul className='navbar-nav ml-auto mr-lg-5' data-toggle='collapse' data-target='.navbar-collapse.show'>
                     <li className='nav-item mr-lg-3'>
-                        <button className='btn btn-dark' onClick={() => exportCharacter()}>Export</button>
+                        <button className='btn btn-dark' onClick={() => exportCharacter()}>Exportar</button>
                         <input style={{display: 'none'}} type="file" id="selectFiles" accept="application/json" onChange={(e) => importCharacter(e)} />
-                        <button className='btn btn-dark' onClick={() => document.getElementById("selectFiles")?.click()}>Import</button>
-                        <button className='btn btn-dark' onClick={() => window.print()}>Print</button>
-                        <button className='btn btn-danger' onClick={() => clearCharacter()}>Clear</button>
+                        <button className='btn btn-dark' onClick={() => document.getElementById("selectFiles")?.click()}>Importar</button>
+                        <button className='btn btn-dark' onClick={() => window.print()}>Imprimir</button>
+                        <button className='btn btn-danger' onClick={() => clearCharacter()}>Borrar</button>
                     </li>
                 </ul>
             </div>
