@@ -155,6 +155,13 @@
   font-size: 10px;
   width: calc(100% - 65px);
 }
+
+@media (max-width: 400px), (min-width: 768px) {
+  .d-and-d-character-sheet .d-and-d-statrow:nth-child(2) .d-and-d-statrow-label {
+    padding: 0;
+  }
+}
+
 .d-and-d-character-sheet .d-and-d-statrow .d-and-d-statrow-value input{
   margin: 3px 0;
   text-align: center;

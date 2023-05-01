@@ -252,7 +252,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   />
                   <StatRow
                     classes='rounded'
-                    label='Bonif. por Competencia'
+                    label='Bonificador por&nbsp;Competencia'
                     name='proficiencyBonus'
                     value={character.proficiencyBonus}
                     onChange={(name: string, value: any) => {
