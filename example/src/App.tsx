@@ -110,7 +110,7 @@ const App = (props: any) => {
     var a = document.createElement('a');
     var file = new Blob([json], {type: 'application/json'});
     a.href = URL.createObjectURL(file);
-    a.download = character.name ? character.name.replace(/[^a-z0-9]/gi, '_').toLowerCase() + '.json' : 'dnd-character.json';
+    a.download = character.name ? character.name.replace(/[^a-z0-9]/gi, '_').toLowerCase() + '.json' : 'dnd-personaje.json';
     a.click();
   }
 
@@ -151,10 +151,10 @@ const App = (props: any) => {
   }
 
   function getDefaultRedirect(search: string | undefined) {
-    let defaultRedirect = '/stats' + search
+    let defaultRedirect = '/status' + search
     if (window.innerWidth < 992) { 
       // is mobile device
-      defaultRedirect = '/all' + search
+      defaultRedirect = '/todo' + search
     }
     return defaultRedirect
   }
@@ -169,16 +169,16 @@ const App = (props: any) => {
             <div className='collapse navbar-collapse' id='navbarSupportedContent'>
                 <ul className='navbar-nav ml-lg-5' data-toggle='collapse' data-target='.navbar-collapse.show'>
                     <li className='nav-item mr-lg-3'>
-                        <Link className={props.location.pathname === '/stats' ? 'nav-link active' : 'nav-link'} to='/stats'>Status</Link>
+                        <Link className={props.location.pathname === '/status' ? 'nav-link active' : 'nav-link'} to='/status'>Status</Link>
                     </li>
                     <li className='nav-item mr-lg-3'>
-                        <Link className={props.location.pathname === '/profile' ? 'nav-link active' : 'nav-link'} to='/profile'>Perfil</Link>
+                        <Link className={props.location.pathname === '/perfil' ? 'nav-link active' : 'nav-link'} to='/perfil'>Perfil</Link>
                     </li>
                     <li className='nav-item mr-lg-3'>
-                        <Link className={props.location.pathname === '/spells' ? 'nav-link active' : 'nav-link'} to='/spells'>Conjuros</Link>
+                        <Link className={props.location.pathname === '/conjuros' ? 'nav-link active' : 'nav-link'} to='/conjuros'>Conjuros</Link>
                     </li>
                     <li className='nav-item mr-lg-3'>
-                        <Link className={props.location.pathname === '/all' ? 'nav-link active' : 'nav-link'} to='/all'>Todo</Link>
+                        <Link className={props.location.pathname === '/todo' ? 'nav-link active' : 'nav-link'} to='/todo'>Todo</Link>
                     </li>
                 </ul>
 
@@ -201,19 +201,19 @@ const App = (props: any) => {
             <ScrollToTop />
             <Redirect to={getDefaultRedirect(search)} />
           </Route>
-          <Route exact path='/stats'>
+          <Route exact path='/status'>
             <ScrollToTop />
             {statsSheet}
           </Route>
-          <Route exact path='/profile'>
+          <Route exact path='/perfil'>
             <ScrollToTop />
             {profileSheet}
           </Route>
-          <Route exact path='/spells'>
+          <Route exact path='/conjuros'>
             <ScrollToTop />
             {spellSheet}
           </Route>
-          <Route exact path='/all'>
+          <Route exact path='/todo'>
             <ScrollToTop />
             {statsSheet}
             <div className='page-break' />
@@ -231,15 +231,18 @@ const App = (props: any) => {
         <div className="container-fluid container-xl text-center text-md-left mt-2 mb-3">
             <div className="row">
               <div className="col-md-6 mt-md-0 mt-3">
-                <h5>DnD Character Sheets</h5>
-                <p>This page was created using dnd-character-sheets, an open source ReactJs library created by Daryl Buckle.</p>
+                <h5>DnD Hojas de Personaje</h5>
+                <p>Esta página fue creada usando dnd-hojas-de-pesonaje, una traducción de dnd-character-sheets, una librería de ReactJs de código abierto creada por Daryl Buckle.</p>
               </div>
               <hr className="clearfix w-100 d-md-none pb-3" />
               <div className="col-md-3 mb-md-0 mb-3">
                 <h5>Links</h5>
                 <ul className="list-unstyled">
                   <li>
-                    <a href="https://github.com/darylbuckle/dnd-character-sheets">Source Code</a>
+                    <a href="https://github.com/darylbuckle/dnd-character-sheets">Código Fuente Original</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jaquer/dnd-hojas-de-personaje">Código Fuente Traducido</a>
                   </li>
                   <li>
                     <a href="https://www.npmjs.com/package/dnd-character-sheets">Npm</a>
@@ -250,10 +253,10 @@ const App = (props: any) => {
                 </ul>
               </div>
               <div className="col-md-3 mb-md-0 mb-3">
-                <h5>Related</h5>
+                <h5>Relacionado</h5>
                 <ul className="list-unstyled">
                   <li>
-                    <a href="https://darylbuckle.github.io/espergen-character-sheets">Esper Genesis Character Sheets</a>
+                    <a href="https://darylbuckle.github.io/espergen-character-sheets">Hojas de Personaje Esper Genesis (en Inglés)</a>
                   </li>
                 </ul>
               </div>
