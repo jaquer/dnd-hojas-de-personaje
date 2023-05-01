@@ -145,7 +145,7 @@ const App = (props: any) => {
   }
 
   function clearCharacter() {
-    if (window.confirm("Are you sure?")) {
+    if (window.confirm("¿Estás seguro?")) {
       updateCharacter({ })
     }
   }
