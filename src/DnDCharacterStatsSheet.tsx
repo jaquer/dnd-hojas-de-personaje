@@ -346,7 +346,7 @@ class DnDCharacterStatsSheet extends React.Component<
                         }}
                       />
                       <Skill
-                        label='C. Arcano'
+                        label='Conocimiento Arcano'
                         hint='(Int)'
                         name='skillArcana'
                         value={character.skillArcana}
@@ -496,7 +496,7 @@ class DnDCharacterStatsSheet extends React.Component<
                         }}
                       />
                       <Skill
-                        label='T. con Animales'
+                        label='Trato con Animales'
                         hint='(Sab)'
                         name='skillAnimalHandling'
                         value={character.skillAnimalHandling}
