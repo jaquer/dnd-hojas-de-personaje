@@ -723,7 +723,7 @@ class DnDCharacterStatsSheet extends React.Component<
                 <div className='row'>
                   <div className='' style={{ width: '100px' }}>
                     <Currency
-                      label='C'
+                      label='PC'
                       name='cp'
                       value={character.cp}
                       onChange={(name: string, value: any) => {
@@ -731,7 +731,7 @@ class DnDCharacterStatsSheet extends React.Component<
                       }}
                     />
                     <Currency
-                      label='P'
+                      label='PP'
                       name='sp'
                       value={character.sp}
                       onChange={(name: string, value: any) => {
@@ -739,7 +739,7 @@ class DnDCharacterStatsSheet extends React.Component<
                       }}
                     />
                     <Currency
-                      label='E'
+                      label='PE'
                       name='ep'
                       value={character.ep}
                       onChange={(name: string, value: any) => {
@@ -747,7 +747,7 @@ class DnDCharacterStatsSheet extends React.Component<
                       }}
                     />
                     <Currency
-                      label='O'
+                      label='PO'
                       name='gp'
                       value={character.gp}
                       onChange={(name: string, value: any) => {
@@ -755,7 +755,7 @@ class DnDCharacterStatsSheet extends React.Component<
                       }}
                     />
                     <Currency
-                      label='PT'
+                      label='PPT'
                       name='pp'
                       value={character.pp}
                       onChange={(name: string, value: any) => {
