@@ -15,7 +15,7 @@ function StatBox(props: {
   let modifier: string = ''
   if (props.value && !isNaN(Number(props.value))) {
     const modifierNum = Math.floor((Number(props.value) - 10) / 2)
-    if (modifierNum > 0) {
+    if (modifierNum >= 0) {
       modifier = '+' + modifierNum
     } else {
       modifier = modifierNum.toString()
